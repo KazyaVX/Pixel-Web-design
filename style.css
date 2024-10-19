@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive; /* Font 8-bit */
+    background: url('https://pa1.aminoapps.com/6823/2c7ab6ffbb5848ff289a3f2cb7d21072ef1edf9d_hq.gif') no-repeat center center fixed;
+    background-size: cover; /* Ensures the gif covers the entire background */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Text color remains white for readability */
+}
+
+/* Header Styling */
+header {
+    background-color: transparent; /* Semi-transparent Kobo blue */
+    padding: 20px 30px; /* Adjust padding for better spacing */
+    position: fixed; /* Stick the header to the top */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px); /* Blur effect */
+    display: flex;
+    justify-content: space-between; /* Space between title and nav */
+    align-items: center;
+}
+
+/* Logo or Title in Header */
+header h1 {
+    color: #00aaff; /* Kobo blue */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin: 0; /* Ensure no extra margin around title */
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    gap: 20px; /* Add space between navigation links */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px; /* Padding for better clickability */
+    border-radius: 0px; /* Rounded corners for smoother design */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: white;
+    color: red;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+nav a.active {
+    background-color: transparent; /* Darker blue for active page */
+}
+
+/* Adjust body to account for the fixed header */
+body {
+    padding-top: 80px; /* Add padding to prevent overlap with fixed header */
+}
+
+/* Flexbox container for intro and image */
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Introduction Section Aligned to Left */
+.intro {
+    text-align: left;
+    max-width: 600px;
+}
+
+.intro h2 {
+    font-size: 32px;
+    color: #00aaff; /* Kobo blue */
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.pixel-button {
+    background-color: #00aaff; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    padding: 10px 20px; /* Jarak dalam tombol */
+    border: 2px solid #00aaff; /* Warna border */
+    text-align: center; /* Rata tengah teks */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    display: inline-block;
+    font-size: 16px; /* Ukuran font */
+    margin: 4px 2px; /* Margin antar tombol */
+    cursor: pointer; /* Cursor jadi pointer saat hover */
+    position: relative; /* Untuk pseudo-element */
+    font-family: 'Press Start 2P', Courier, monospace; /* Font monospace untuk tampilan pixel */
+    letter-spacing: 1px; /* Jarak antar huruf */
+}
+
+.pixel-button:hover {
+    background-color: #0083d4; /* Warna latar belakang saat hover */
+}
+
+/* Menambahkan efek pixel */
+.pixel-button:before,
+.pixel-button:after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    border: inherit;
+    z-index: -1;
+}
+
+.pixel-button:before {
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+}
+
+.pixel-button:after {
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+}
+
+/* Sudut pixel */
+.pixel-button {
+    border-radius: 0; /* Menghilangkan sudut melengkung */
+    box-shadow: 2px 2px 0 #2cbdff, 4px 4px 0 #00588d; /* Menambahkan efek bayangan pixel */
+}
+/* Icon Section */
+.icons {
+    margin-top: 20px;
+    display: flex;
+}
+
+.icons img {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    filter: contrast(150%);
+}
+
+/* Styling untuk garis (line) */
+#line {
+    width: 2px;
+    height: 0; /* Garis dimulai dari 0 (tidak terlihat) */
+    background-color: black;
+    position: absolute;
+    bottom: 0; /* Garis dimulai dari bawah */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: height 1s ease;
+}
+
+/* Animasi garis (line) */
+.animate-line {
+    height: 300px; /* Garis akan tumbuh hingga 300px ke atas */
+}
+
+#photo-container {
+    position: absolute;
+    bottom: 0; /* Gambar juga dimulai dari bawah */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#photo {
+    opacity: 0; /* Awalnya gambar tidak terlihat */
+    transform: translateY(50px); /* Awalnya gambar berada di bawah garis */
+    transition: opacity 1s ease, transform 1s ease; /* Transisi smooth */
+}
+
+/* Kelas show yang ditambahkan saat animasi dimulai */
+#photo.show {
+    opacity: 1; /* Gambar menjadi terlihat */
+    transform: translateY(0); /* Gambar naik ke posisi aslinya */
+}
+
+footer {
+    background-color: #00aaff; /* Warna latar belakang footer */
+    color: white; /* Warna teks */
+    padding: 20px; /* Jarak dalam footer */
+    text-align: center; /* Rata tengah teks */
+    position: fixed; /* Untuk efek pixel */
+    overflow: hidden; /* Menghindari overflow */
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+}
+
+footer:before,
+footer:after {
+    content: '';
+    position: absolute;
+    background: inherit; /* Menggunakan latar belakang yang sama */
+    z-index: -1;
+}
+
+footer:before {
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+}
+
+footer:after {
+    top: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+}
+
+.pixel {
+    display: inline-block;
+    width: 10px; /* Ukuran pixel */
+    height: 10px; /* Ukuran pixel */
+    background-color: white; /* Warna pixel */
+    margin: 2px; /* Jarak antar pixel */
+}
+
+.pixel-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
