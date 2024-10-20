@@ -1,0 +1,72 @@
+/* Reset dasar */
+body, html {
+    font-family: 'Press Start 2P', cursive; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+pixelify-sans-custom { /* Ganti <uniquifier> dengan nama yang sesuai */
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Ganti <weight> dengan nilai yang sesuai */
+    font-style: normal;
+}
+
+#experience {
+    width: 100%;
+}
+
+.experience-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Setengah dari tinggi viewport */
+    width: 100%;
+}
+
+/* Bagian hitam */
+.black-section {
+    font-family: 'Pixelify Sans', cursive; /* Pastikan konsisten */
+    background-color: #00aaff;
+    color: #fff;
+}
+
+/* Bagian putih */
+.white-section {
+    font-family: 'Pixelify Sans', cursive; 
+    background-color: #fff;
+    color: #000;
+}
+
+.experience-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+/* Gambar */
+.experience-content img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.experience-text {
+    flex: 1;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}

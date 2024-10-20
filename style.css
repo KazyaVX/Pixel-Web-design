@@ -30,7 +30,6 @@ header {
 /* Logo or Title in Header */
 header h1 {
     color: #00aaff; /* Kobo blue */
-    text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 22px;
     margin: 0; /* Ensure no extra margin around title */
