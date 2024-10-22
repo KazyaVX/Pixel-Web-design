@@ -21,7 +21,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(6px); /* Blur effect */
+    backdrop-filter: blur(2px); /* Blur effect */
     display: flex;
     justify-content: space-between; /* Space between title and nav */
     align-items: center;
@@ -237,4 +237,32 @@ footer:after {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 10px;
+}
+
+/* Section 2: Vestie Zeta */
+.experience-item.vestie-section {
+    background-color: #7f00ff; /* Warna ungu untuk tema Vestie Zeta */
+    color: #fff; /* Warna teks putih */
+}
+
+.vestie-section .experience-content {
+    align-items: center; /* Mengatur konten secara vertikal */
+}
+
+.vestie-section .experience-content img {
+    width: 200px; /* Ukuran gambar yang lebih besar */
+    height: auto;
+    margin-right: 40px; /* Jarak antara gambar dan teks */
+}
+
+.vestie-section h2 {
+    font-size: 3.5rem; /* Ukuran judul yang lebih besar */
+    margin-bottom: 20px;
+}
+
+.vestie-section ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
